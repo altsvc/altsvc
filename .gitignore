@@ -16,3 +16,9 @@ bin/
 # vendor/
 
 .idea
+
+
+# Added by cargo
+
+/target
+*.lock
