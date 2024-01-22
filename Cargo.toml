@@ -1,6 +1,6 @@
 [package]
 name = "altsvc"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "alt-svc header parser"
 license = "MIT"

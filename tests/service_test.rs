@@ -1,4 +1,4 @@
-use altsvc::{AltAuthority, Service};
+use altsvc::{parse, AltAuthority, Service};
 
 #[test]
 fn test_parse() {
@@ -93,7 +93,7 @@ fn test_parse() {
     ];
 
     for (input, expected) in test_cases {
-        let result = Service::parse(input).unwrap();
+        let result = parse(input).unwrap();
         assert_eq!(result, expected);
     }
 }
@@ -106,7 +106,7 @@ fn test_parse_errors() {
     ];
 
     for (input, error_prefix) in test_cases {
-        let result = Service::parse(input);
+        let result = parse(input);
         assert!(result.is_err());
         assert!(result.unwrap_err().to_string().starts_with(error_prefix));
     }
